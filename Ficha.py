@@ -18,7 +18,8 @@ class Ficha:
         #aquí se vuelve claro por qué necesitamos un dado
         pasos = self.dado.lanzar()
         self.posicion += pasos
-        print(self.posicion)
+        print("+",pasos," pasos para la ficha ",self.color)
+        print("La ficha ", self.color ,"está en la posición ",self.posicion)
     
 
 

@@ -1,16 +1,10 @@
-from random import *
-
+import numpy as np
 class Dado:
 
     caras=0
 
-    #este atributo no estaba en el modelo explícitamente
-    #pero lo necesitamos para poder crear los números aleatorios
-    #normalmente deberíamos esconderlo para que no sea accesible (encapsulamiento)
-    rnd=Random(42)
-
     def __init__(self, numCaras):
-        self.caras=numCaras
-    
+        self.caras=numCaras 
+          
     def lanzar(self):
-        return self.rnd.randint(1, self.caras)
+        return np.random.randint(low=1,high=self.caras)
